@@ -1,4 +1,4 @@
-# Debian 9 Docker image with MiKTeX build environment
+# Debian 9 docker image with MiKTeX build environment
 
 ## Obtaining the image
 
