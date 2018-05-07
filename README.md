@@ -4,11 +4,11 @@
 
 Get the latest image from the registry:
 
-    docker pull miktex/miktex-build-stretch
+    docker pull miktex/miktex-build-debian:stretch
 
 or build it yourself:
 
-    docker build --tag miktex/miktex-build-stretch .
+    docker build --tag miktex/miktex-build-debian:stretch .
 
 ## Using the image
 
@@ -17,6 +17,9 @@ or build it yourself:
 MiKTeX source code must be mounted to the container path
 `/miktex/source` and the build directory must be mounted to the
 container path `/miktex/build`.
+
+You should specify a user by setting the container environment
+variables `USER_ID` and `GROUP_ID`.
 
 ### Example
 
@@ -29,7 +32,9 @@ Build the MiKTeX deb package:
     docker run -t \
       -v ~/work/miktex/source:/miktex/source:ro \
       -v ~/work/miktex/builds/stretch:/miktex/build:rw \
-      miktex/miktex-build-stretch
+      -e USER_ID=`id -u` \
+      -e GROUP_ID=`id -g` \
+      miktex/miktex-build-debian:stretch
 
 The build artifact `miktex-*.deb` will be written to
 `~/work/miktex/builds/stretch`.
