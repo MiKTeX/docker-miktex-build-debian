@@ -1,6 +1,6 @@
-FROM debian:rc-buggy
+FROM debian:latest
 
-LABEL Description="MiKTeX build environment, Debian experimental" Vendor="Christian Schenk" Version="2.9.6701"
+LABEL Description="MiKTeX build environment, Debian latest" Vendor="Christian Schenk" Version="2.9.6701"
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
