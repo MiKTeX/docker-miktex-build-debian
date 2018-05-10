@@ -1,6 +1,6 @@
-FROM debian:rc-buggy
+FROM debian:buster
 
-LABEL Description="MiKTeX build environment, Debian experimental" Vendor="Christian Schenk" Version="2.9.6701"
+LABEL Description="MiKTeX build environment, Debian experimental" Vendor="Christian Schenk" Version="2.9.6703"
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -9,6 +9,7 @@ RUN    apt-get update \
            cmake \
            curl \
            dpkg-dev \
+           file \
            flex \
            g++ \
            gcc \
@@ -22,7 +23,7 @@ RUN    apt-get update \
            libgraphite2-dev \
            libhunspell-dev \
            libicu-dev \
-           liblog4cxx10-dev \
+           liblog4cxx-dev \
            libmpfr-dev \
            libmspack-dev \
            libpopt-dev \
