@@ -1,6 +1,6 @@
 FROM debian:stretch
 
-LABEL Description="MiKTeX build environment, Debian 9" Vendor="Christian Schenk" Version="2.9.6713"
+LABEL Description="MiKTeX build environment, Debian 9" Vendor="Christian Schenk" Version="2.9.6776"
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
