@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/sh -e
+
+apt-get -y update
+apt-get -y dist-upgrade
 
 GROUP_ID=${GROUP_ID:-1001}
 USER_ID=${USER_ID:-1001}
