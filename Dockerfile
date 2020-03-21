@@ -1,6 +1,6 @@
 FROM debian:buster
 
-LABEL Description="MiKTeX build environment, Debian experimental" Vendor="Christian Schenk" Version="2.9.7322"
+LABEL Description="MiKTeX build environment, Debian experimental" Vendor="Christian Schenk" Version="2.9.7385"
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -13,6 +13,7 @@ RUN    apt-get update \
            flex \
            g++ \
            gcc \
+	   git \
            gosu \
            libbz2-dev \
            libcairo2-dev \
