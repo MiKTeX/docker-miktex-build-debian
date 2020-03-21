@@ -1,6 +1,6 @@
 FROM debian:stretch
 
-LABEL Description="MiKTeX build environment, Debian 9" Vendor="Christian Schenk" Version="2.9.7070"
+LABEL Description="MiKTeX build environment, Debian 9" Vendor="Christian Schenk" Version="2.9.7385"
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -12,6 +12,7 @@ RUN    apt-get update \
            flex \
            g++ \
            gcc \
+	   git \
            gosu \
            libbz2-dev \
            libcairo2-dev \
