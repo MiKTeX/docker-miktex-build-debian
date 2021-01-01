@@ -13,7 +13,7 @@ RUN    apt-get update \
            g++ \
            gettext \
            gcc \
-	   git \
+           git \
            gosu \
            libboost-locale-dev \
            libbz2-dev \
