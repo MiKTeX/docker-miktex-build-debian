@@ -1,6 +1,6 @@
 FROM debian:buster
 
-LABEL Description="MiKTeX build environment, Debian experimental" Vendor="Christian Schenk" Version="2.9.7385"
+LABEL Description="MiKTeX build environment, Debian experimental" Vendor="Christian Schenk" Version="21.1"
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -12,9 +12,11 @@ RUN    apt-get update \
            file \
            flex \
            g++ \
+           gettext \
            gcc \
            git \
            gosu \
+           libboost-locale-dev \
            libbz2-dev \
            libcairo2-dev \
            libcurl4-openssl-dev \
