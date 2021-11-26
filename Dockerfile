@@ -1,6 +1,6 @@
 FROM debian:buster
 
-LABEL Description="MiKTeX build environment, Debian experimental" Vendor="Christian Schenk" Version="21.3"
+LABEL Description="MiKTeX build environment, Debian 10 (Buster)" Vendor="Christian Schenk" Version="21.11"
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
