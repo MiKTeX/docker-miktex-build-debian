@@ -1,46 +1,47 @@
-FROM debian:buster
+FROM debian:bullseye
 
-LABEL Description="MiKTeX build environment, Debian 10 (Buster)" Vendor="Christian Schenk" Version="21.11"
+LABEL Description="MiKTeX build environment, Debian 11 (Bullseye)" Vendor="Christian Schenk" Version="22.8.20"
 
-RUN    apt-get update \
-    && apt-get install -y --no-install-recommends \
-           bison \
-           ca-certificates \
-           cmake \
-           curl \
-           dpkg-dev \
-           file \
-           flex \
-           g++ \
-           gettext \
-           gcc \
-           git \
-           gosu \
-           libboost-locale-dev \
-           libbz2-dev \
-           libcairo2-dev \
-           libcurl4-openssl-dev \
-           libfribidi-dev \
-           libgd-dev \
-           libgmp-dev \
-           libgraphite2-dev \
-           libhunspell-dev \
-           libicu-dev \
-           liblog4cxx-dev \
-           libmpfr-dev \
-           libmspack-dev \
-           libpopt-dev \
-           libpotrace-dev \
-           libssl-dev \
-           liburiparser-dev \
-           libzzip-dev \
-           make \
-           qtbase5-dev \
-           qtdeclarative5-dev \
-           qtscript5-dev \
-           qttools5-dev \
-           xsltproc \
-           xz-utils
+RUN \
+    apt-get update; \
+    apt-get install -y --no-install-recommends \
+        bison \
+        ca-certificates \
+        cmake \
+        curl \
+        dpkg-dev \
+        file \
+        flex \
+        g++ \
+        gettext \
+        gcc \
+        git \
+        gosu \
+        libboost-locale-dev \
+        libbz2-dev \
+        libcairo2-dev \
+        libcurl4-openssl-dev \
+        libfribidi-dev \
+        libgd-dev \
+        libgmp-dev \
+        libgraphite2-dev \
+        libhunspell-dev \
+        libicu-dev \
+        liblog4cxx-dev \
+        libmpfr-dev \
+        libmspack-dev \
+        libpopt-dev \
+        libpotrace-dev \
+        libssl-dev \
+        liburiparser-dev \
+        libzzip-dev \
+        make \
+        qtbase5-dev \
+        qtdeclarative5-dev \
+        qtscript5-dev \
+        qttools5-dev \
+        xsltproc \
+        xz-utils
 
 RUN mkdir /miktex
 WORKDIR /miktex
