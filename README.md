@@ -1,14 +1,14 @@
-# Debian 11 docker image with MiKTeX build environment
+# Debian 12 docker image with MiKTeX build environment
 
 ## Obtaining the image
 
 Get the latest image from the registry:
 
-    docker pull miktex/miktex-build-debian:bullseye
+    docker pull miktex/miktex-build-debian:bookworm
 
 or build it yourself:
 
-    docker build --tag miktex/miktex-build-debian:bullseye .
+    docker build --tag miktex/miktex-build-debian:bookworm .
 
 ## Using the image
 
@@ -25,15 +25,15 @@ You should specify a user by setting the container environment variables
 Build the MiKTeX deb package:
 
     mkdir -p ~/work/miktex/source
-    mkdir -p ~/work/miktex/builds/bullseye
-    curl -fsSL https://miktex.org/download/ctan/systems/win32/miktex/source/miktex-22.8.tar.xz | \
+    mkdir -p ~/work/miktex/builds/bookworm
+    curl -fsSL https://miktex.org/download/ctan/systems/win32/miktex/source/miktex-23.9.24.tar.xz | \
       tar -xJ --strip-components=1 -C ~/work/miktex/source
     docker run -t \
       -v ~/work/miktex/source:/miktex/source:ro \
-      -v ~/work/miktex/builds/bullseye:/miktex/build:rw \
+      -v ~/work/miktex/builds/bookworm:/miktex/build:rw \
       -e USER_ID=`id -u` \
       -e GROUP_ID=`id -g` \
-      miktex/miktex-build-debian:bullseye
+      miktex/miktex-build-debian:bookworm
 
 The build artifact `miktex-*.deb` will be written to
-`~/work/miktex/builds/bullseye`.
+`~/work/miktex/builds/bookworm`.

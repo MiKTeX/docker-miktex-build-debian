@@ -1,6 +1,6 @@
-FROM debian:bullseye
+FROM debian:bookworm
 
-LABEL Description="MiKTeX build environment, Debian 11 (Bullseye)" Vendor="Christian Schenk" Version="22.8.20"
+LABEL Description="MiKTeX build environment, Debian 12 (bookworm)" Vendor="Christian Schenk" Version="23.10.03"
 
 RUN \
     apt-get update; \
