@@ -1,6 +1,6 @@
 FROM debian:bullseye
 
-LABEL Description="MiKTeX build environment, Debian 11 (Bullseye)" Vendor="Christian Schenk" Version="22.8.20"
+LABEL Description="MiKTeX build environment, Debian 11 (Bullseye)" Vendor="Christian Schenk" Version="23.12.29"
 
 RUN \
     apt-get update; \
