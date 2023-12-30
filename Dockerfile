@@ -1,6 +1,6 @@
 FROM debian:bookworm
 
-LABEL Description="MiKTeX build environment, Debian 12 (bookworm)" Vendor="Christian Schenk" Version="23.10.03"
+LABEL Description="MiKTeX build environment, Debian 12 (bookworm)" Vendor="Christian Schenk" Version="23.12.30"
 
 RUN \
     apt-get update; \
@@ -36,10 +36,10 @@ RUN \
         liburiparser-dev \
         libzzip-dev \
         make \
-        qtbase5-dev \
-        qtdeclarative5-dev \
-        qtscript5-dev \
-        qttools5-dev \
+        qt6-5compat-dev \
+        qt6-base-dev \
+        qt6-declarative-dev \
+        qt6-tools-dev \
         xsltproc \
         xz-utils
 
