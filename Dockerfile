@@ -1,6 +1,6 @@
 FROM debian:bookworm
 
-LABEL Description="MiKTeX build environment, Debian 12 (bookworm)" Vendor="Christian Schenk" Version="26.11.14"
+LABEL Description="MiKTeX build environment, Debian 12 (bookworm)" Vendor="Christian Schenk" Version="26.11.16"
 
 RUN \
     apt-get update; \
