@@ -1,6 +1,6 @@
 FROM debian:trixie
 
-LABEL Description="MiKTeX build environment, Debian 13 (trixie)" Vendor="Christian Schenk" Version="26.2.2"
+LABEL Description="MiKTeX build environment, Debian 13 (trixie)" Vendor="Christian Schenk" Version="26.11.16"
 
 RUN \
     apt-get update; \
@@ -25,11 +25,12 @@ RUN \
         libgd-dev \
         libgmp-dev \
         libgraphite2-dev \
+        libharfbuzz-dev \
         libhunspell-dev \
         libicu-dev \
         liblog4cxx-dev \
-        #libmpfi-dev \
-        #libmpfr-dev \
+        libmpfi-dev \
+        libmpfr-dev \
         libmspack-dev \
         libpopt-dev \
         libpotrace-dev \
